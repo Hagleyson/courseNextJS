@@ -1,12 +1,19 @@
-import styled from "styled-components";
+// import { mapData } from '@/api/map-data';
+// import config from '@/config';
+import Home from '@/templates/Home';
 
-const Heading = styled.h1`
-  background: ${({ theme }) => theme.colors.secondaryColor};
-`;
-export default function Home() {
-  return (
-    <>
-      <Heading>hagleyson</Heading>
-    </>
-  );
+export default function Index({ data }: any) {
+  return <Home data={data} />;
 }
+
+export const getStaticProps = async () => {
+  // const raw = await fetch(config.url + config.defaultSlug);
+  // const json = await raw.json();
+  // const map = mapData(json);
+
+  return {
+    props: {
+      data: [],
+    },
+  };
+};

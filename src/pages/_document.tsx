@@ -1,3 +1,4 @@
+import { theme } from '@/styles/theme';
 import Document, { Html, Main, NextScript } from 'next/document';
 import Head from 'next/head';
 import { ServerStyleSheet } from 'styled-components';
@@ -31,10 +32,16 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="pt-BR">
-        <Head>
-          <meta name="description" content="lala" />
-        </Head>
         <body>
+          <Head>
+            <title>home</title>
+
+            <meta name="theme-color" content={theme.colors.primaryColor} />
+            <meta
+              name="description"
+              content="As landing pages mais legais da Internet."
+            />
+          </Head>
           <Main />
           <NextScript />
         </body>

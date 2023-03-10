@@ -12,6 +12,7 @@ import config from '../../config';
 import { theme } from '../../styles/theme';
 import { LogoLinkProps } from '../../components/LogoLink';
 import { MenuLinkProps } from '../../components/MenuLink';
+import styled from 'styled-components';
 
 export type PageData = {
   title: string;
@@ -31,7 +32,15 @@ export type HomeProps = {
   data: PageData[];
 };
 
+const Teste = styled.h1`
+  background: black;
+`;
+
 function Home({ data }: HomeProps) {
+  if (data.length <= 0) {
+    return <Teste>erro</Teste>;
+  }
+  console.log('OK');
   const { menu, sections, footerHtml, slug, title } = data[0];
   const { links, text, link, srcImg } = menu;
 
