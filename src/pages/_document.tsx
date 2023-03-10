@@ -29,23 +29,4 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
-  render(): JSX.Element {
-    return (
-      <Html lang="pt-BR">
-        <body>
-          <Head>
-            <title>home</title>
-
-            <meta name="theme-color" content={theme.colors.primaryColor} />
-            <meta
-              name="description"
-              content="As landing pages mais legais da Internet."
-            />
-          </Head>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
 }
