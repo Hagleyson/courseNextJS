@@ -37,10 +37,6 @@ const Teste = styled.h1`
 `;
 
 function Home({ data }: HomeProps) {
-  if (data.length <= 0) {
-    return <Teste>erro</Teste>;
-  }
-  console.log('OK');
   const { menu, sections, footerHtml, slug, title } = data[0];
   const { links, text, link, srcImg } = menu;
 
